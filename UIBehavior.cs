@@ -57,4 +57,33 @@ public class UIBehavior : MonoBehaviour {
             btn.onClick.RemoveListener(p_action);
         }
     }
+    /// <summary>
+    /// 添加NGUI的按钮事件
+    /// </summary>
+    /// <param name="p_action"></param>
+    public void AddNGUIBtnListener(EventDelegate p_action)
+    {
+        if (p_action != null)
+        {
+            UIButton btn = this.transform.GetComponent<UIButton>();
+
+            EventDelegate.Add(btn.onClick, p_action);
+        }
+
+        //EventDelegate.Add(sendButton.onClick, delegate(){
+    }
+
+    /// <summary>
+    /// 删除NGUI按钮事件
+    /// </summary>
+    /// <param name="p_action"></param>
+    public void RmNGUIBtnListener(EventDelegate p_action)
+    {
+        if (p_action != null)
+        {
+            UIButton btn = this.transform.GetComponent<UIButton>();
+
+            EventDelegate.Remove(btn.onClick, p_action);
+        }
+    }
 }

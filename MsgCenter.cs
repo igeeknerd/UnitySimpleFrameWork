@@ -23,6 +23,7 @@ public class MsgCenter:MonoBase{
     void Awake()
     {
         Instance = this;
+        this.gameObject.AddComponent<UIManager>();
     }
     // Use this for initialization
     void Start () {
