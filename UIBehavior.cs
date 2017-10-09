@@ -15,7 +15,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 /// <summary>
-/// 处理UI控件的插件类
+/// 处理UI控件的插件类,支持UGUI和NGUI
 /// </summary>
 public class UIBehavior : MonoBehaviour {
 
@@ -34,7 +34,7 @@ public class UIBehavior : MonoBehaviour {
 		
 	}
     /// <summary>
-    /// 添加按钮事件
+    /// 添加UGUI按钮事件
     /// </summary>
     /// <param name="p_action"></param>
     public void AddBtnListener(UnityAction p_action)
@@ -46,7 +46,7 @@ public class UIBehavior : MonoBehaviour {
         }
     }
     /// <summary>
-    /// 删除按钮事件
+    /// 删除UGUI按钮事件
     /// </summary>
     /// <param name="p_action"></param>
     public void RMBtnListener(UnityAction p_action)
