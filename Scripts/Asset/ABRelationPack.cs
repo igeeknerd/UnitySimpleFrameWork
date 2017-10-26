@@ -140,7 +140,7 @@ public class ABRelationPack:IDispose{
     /// </summary>
     /// <param name="p_name"></param>
     /// <returns></returns>
-    public UnityEngine.Object GetSignleResource(string p_name)
+    public UnityEngine.Object GetSingleResource(string p_name)
     {
         return assloader.GetOneResource(p_name);
     }
@@ -160,6 +160,19 @@ public class ABRelationPack:IDispose{
     public IEnumerator LoadCoro()
     {
         yield return assloader.LoadCoro();
+    }
+
+    public void ShowAllAssetsNames()
+    {
+        if(this.assloader != null)
+        {
+            this.assloader.ShowAllAssetsNames();
+        }
+        else
+        {
+            Debug.LogError("加载器为空.");
+        }
+        
     }
     /// <summary>
     /// 销毁进度
